@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+{% for table in tables %}
+<table>
+  <tr>
+    {% for title in titles %}
+    <th>{{title}}</th>
+    {% endfor %}
+  </tr>
+  <tr>
+
+    <td>{{table | safe }}</td>
+    
+  </tr>
+</table>
+{% endfor %}
+</body>
+</html>

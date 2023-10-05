@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="row p-4">
+  <div class="card m-auto" style="width: 80%;">
+    <div class="card-body">
+      <div id="Chart1"></div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dolorem, a? Ducimus odio eum perferendis ullam, illum doloremque
+         perspiciatis exercitationem ad quod est corporis, iste amet nulla 
+         odit mollitia enim. Alias odit nam dicta autem quo, dolor impedit 
+         reiciendis id vel recusandae sit cumque quia libero perspiciatis, 
+         consectetur corporis deserunt et!
+      </p>
+    </div>
+  </div>
+ </div>
+
+ <div class="row p-4">
+  <div class="card m-auto" style="width: 80%;">
+    <div class="card-body">
+      <div id="Chart2"></div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dolorem, a? Ducimus odio eum perferendis ullam, illum doloremque
+         perspiciatis exercitationem ad quod est corporis, iste amet nulla 
+         odit mollitia enim. Alias odit nam dicta autem quo, dolor impedit 
+         reiciendis id vel recusandae sit cumque quia libero perspiciatis, 
+         consectetur corporis deserunt et!
+      </p>
+    </div>
+  </div>
+ </div>
+
+ <script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
+ <script>
+    var graph1 = {{ graph | safe }};
+    Plotly.newPlot("Chart1", graph1, {});
+
+    var graph2 = {{ graph2 | safe }};
+    Plotly.newPlot("Chart2", graph2, {});
+ </script>
+ 
+{% endblock %}

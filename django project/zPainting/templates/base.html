@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>zPainting</title>
+	<meta name="description" content="Free Responsive Html5 Css3 Templates | Zerotheme.com">
+	<meta name="author" content="https://www.zerotheme.com">
+
+    <!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+	================================================== -->
+  	<link rel="stylesheet" href="/static/css/zerogrid.css">
+	<link rel="stylesheet" href="/static/css/style.css">
+
+	<!-- Custom Fonts -->
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="/static/css/menu.css">
+	<script src="/static/js/jquery1111.min.js" type="text/javascript"></script>
+	<script src="/static/js/script.js"></script>
+
+	<!-- Owl Carousel Assets -->
+    <link href="/static/owl-carousel/owl.carousel.css" rel="stylesheet">
+
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/Items/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="/static/js/html5.js"></script>
+		<script src="/static/js/css3-mediaqueries.js"></script>
+	<![endif]-->
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<div class="wrap-body">
+
+		<header class="main-header">
+			<div class="zerogrid">
+				<!--Top-->
+				<div id="top">
+					<div class="row">
+						<div class="col-2-3">
+							<ul class="list-inline top-link link">
+								<li><a href="#">Facebook</a></li>
+								<li><a href="#">Instagram</a></li>
+								<li><a href="#">Twitter</a></li>
+								<li><a href="#">Google +</a></li>
+								<li><a href="#">Pinterest</a></li>
+							</ul>
+						</div>
+						<div class="col-1-3">
+							<div class="top-search">
+								<form id="form-container" action="">
+									<!--<input type="submit" id="searchsubmit" value="" />-->
+									<a class="search-submit-button" href="javascript:void(0)">
+										<i class="fa fa-search"></i>
+									</a>
+									<div id="searchtext">
+										<input type="text" id="s" name="s" placeholder="Search">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-center">
+					<a class="site-branding" href="index.html">
+						<img src="/static/images/logo.png" width="300px"/>
+					</a><!-- .site-branding -->
+
+					<!-- Menu-main -->
+					<div id='cssmenu' class="align-center">
+						<ul>
+						   <li class="active"><a href='{% url 'home' %}'><span>Home</span></a></li>
+						   <li class=' has-sub'><a href='#'><span>Categories</span></a>
+							  <ul >
+								 <li class='has-sub'><a href='#'><span>Item 1</span></a>
+									<ul>
+									   <li><a href='#'><span>Sub Item</span></a></li>
+									   <li class='last'><a href='#'><span>Sub Item</span></a></li>
+									</ul>
+								 </li>
+								 <li class='has-sub'><a href='#'><span>Item 2</span></a>
+									<ul>
+									   <li><a href='#'><span>Sub Item</span></a></li>
+									   <li class='last'><a href='#'><span>Sub Item</span></a></li>
+									</ul>
+								 </li>
+							  </ul>
+						   </li>
+						   <li><a href='{% url 'about' %}'><span>About</span></a></li>
+						   <li><a href='{% url 'blog' %}'><span>Blog</span></a></li>
+						   <li><a href='{% url 'contact' %}'><span>Contacts</span></a></li>
+							<li class='last'><a href='{% url 'login' %}'><span>Login</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		{% if messages %}
+		<ul class="messages">
+			{% for message in messages %}
+			<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+			{% endfor %}
+		</ul>
+{% endif %}
+        {% block body %}
+
+        {% endblock %}
+        <!--////////////////////////////////////Footer-->
+        <footer>
+			<div class="zerogrid wrap-footer">
+				<div class="row">
+					<div class="bottom-social">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+						<a href="#"><i class="fa fa-vimeo"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-youtube"></i></a>
+					</div>
+				</div>
+				<div class="copyright">
+					Copyright @ - Designed by <a href="https://www.zerotheme.com">ZEROTHEME</a>
+				</div>
+			</div>
+		</footer>
+		<!-- carousel -->
+		<script src="/static/owl-carousel/owl.carousel.js"></script>
+		<script>
+		$(document).ready(function() {
+		  $("#owl-slide").owlCarousel({
+			autoPlay: 3000,
+			items : 1,
+			itemsDesktop : [1199,1],
+			itemsDesktopSmall : [979,1],
+			itemsTablet : [768, 1],
+			itemsMobile : [479, 1],
+			navigation: true,
+			navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+			pagination: false
+		  });
+		});
+		var marker;
+	  var image = 'images/map-marker.png';
+      function initMap() {
+        var myLatLng = {lat: 39.79, lng: -86.14};
+
+		// Specify features and elements to define styles.
+        var styleArray = [
+          {
+            featureType: "all",
+            stylers: [
+             { saturation: -80 }
+            ]
+          },{
+            featureType: "road.arterial",
+            elementType: "geometry",
+            stylers: [
+              { hue: "#000000" },
+              { saturation: 50 }
+            ]
+          },{
+            featureType: "poi.business",
+            elementType: "labels",
+            stylers: [
+              { visibility: "off" }
+            ]
+          }
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+		   // Apply the map style array to the map.
+          styles: styleArray,
+          zoom: 7
+        });
+
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+          map: map
+        });
+
+		// Create a marker and set its position.
+        marker = new google.maps.Marker({
+          map: map,
+		  icon: image,
+		  draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: myLatLng
+        });
+		marker.addListener('click', toggleBounce);
+      }
+
+	  function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+		</script>
+	</div>
+</body>
+</html>
